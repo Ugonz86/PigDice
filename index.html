@@ -11,22 +11,23 @@
     <div class="container">
       <div class="jumbotron">
         <h1>Pig Dice</h1>
-        <form id="diceForm" class="form-group">
+
           <div class="player-pair">
             <label class="player-pair">Enter player 1</label>
             <input id="player1" type="text">
+            <button id="player1button" class="player-1 btn-success" name="button">P1 Play!</button>
           </div>
           <div class="player-pair2">
             <label class="player-pair2">Enter player 2</label>
             <input id="player2" type="text">
+            <button id="player2button" class="player-2 btn-success" name="button">P2 Play!</button>
           </div>
-          <button class="player-pair btn-success" name="button">Play!</button>
-        </form>
+
       </div>
       <div class="result">
         <div id="resultPlayer1">
-          <h1><span id="player1"></span>:<span class="scoreDisplay player1Score">0</span></h1>
-          <h1><span id="player2"></span>:<span class="scoreDisplay player2Score">0</span></h1>
+          <h1><span id="player1"></span> <span id="player1Score" class="scoreDisplay">0</span></h1>
+          <h1><span id="player2"></span> <span id="player2Score" class="scoreDisplay">0</span></h1>
         </div>
       </div>
     </div>

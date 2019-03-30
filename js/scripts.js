@@ -3,7 +3,6 @@ function Players(player1, player2) {
   this.player2 = player2;
 }
 
-
 var diceGame = {
   player1Score: 0,
   player2Score: 0,
@@ -28,14 +27,19 @@ var playerRoll = function () {
 }
 
 $(document).ready(function() {
-  $('form#diceForm').submit(function(event) {
 
+  $('#player1button').click(function(event){
     var player1 = $("input#player1").val();
-    var player2 = $("input#player2").val();
+    var p1dice = diceRoll();
     $("span#player1").text(player1);
-    $("span#player2").text(player2);
-    diceRoll();
+    $('#player1Score').text(p1dice);
     event.preventDefault();
-
+  });
+  $('#player2button').click(function(event){
+    var player2 = $("input#player2").val();
+    var p2dice = diceRoll();
+    $("span#player2").text(player2);
+    $('#player2Score').text(p2dice);
+    event.preventDefault();
   });
 })
